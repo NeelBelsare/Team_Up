@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Sign-up Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for easy customization */
+        :root {
+            --primary-color: #4dcfff; /* A vibrant blue for headlines */
+            --secondary-color: #8cffb3; /* A complementary green for emphasis */
+            --text-color: #e0e0e0; /* Light gray for body text */
+            --background-color: #1a1a33; /* Dark background fallback */
+            --container-bg: rgba(255, 255, 255, 0.08); /* Frosted glass effect */
+            --container-border: rgba(255, 255, 255, 0.18);
+            --shadow-color: rgba(31, 38, 135, 0.37);
+        }
+
+        /* --- Base Styles (Mobile-First) --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            background-image: url('http://googleusercontent.com/image_generation_content/3');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 var(--shadow-color);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--container-border);
+            max-width: 90%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .qr-code {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        /* The link wrapper for the QR code */
+        .qr-code a {
+            display: inline-block;
+            transition: transform 0.3s ease-in-out;
+        }
+        .qr-code a:hover {
+            transform: scale(1.05);
+        }
+
+        .qr-code img {
+            max-width: 180px;
+            height: auto;
+            border: 5px solid var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .qr-code p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info p {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+
+        /* --- Desktop and Tablet Styles --- */
+        @media (min-width: 600px) {
+            body {
+                padding: 40px;
+            }
+
+            .container {
+                padding: 50px;
+                max-width: 800px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            .qr-code img {
+                max-width: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hello Students!</h1>
+
+        <p>
+            Get ready to build, innovate, and create! As we gear up for upcoming projects and hackathons, I'm assembling teams for exciting initiatives.
+        </p>
+
+        <p>
+            To ensure the best fit for everyone, please scan the QR code below or tap on it to fill out a short Google Form. Your input will help me understand your skills, interests, and previous projects, enabling me to create well-rounded teams that can tackle challenges effectively.
+        </p>
+        
+        <p>
+            To ensure the best fit for everyone, please scan the QR code below to fill out a short Google Form. Your input will help me understand your skills, interests, and previous projects, enabling me to create well-rounded teams that can tackle challenges effectively.
+        </p>
+
+        <div class="qr-code">
+            <a href="https://your-google-form-link.com" target="_blank">
+                <img src="google_form_qr.png" alt="QR Code to Google Form">
+            </a>
+            <p>Scan or Tap to fill out the form</p>
+        </div>
+
+        <p>
+            Thank you for your time, and I'm looking forward to collaborating with you!
+        </p>
+
+        <div class="contact-info">
+            <p>For any queries, contact Neel Belsare at 9326208190</p>
+        </div>
+    </div>
+
+</body>
+</html>
