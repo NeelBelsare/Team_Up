@@ -10,13 +10,15 @@
     <style>
         /* CSS Variables for easy customization */
         :root {
-            --primary-color: #4dcfff; /* A vibrant blue for headlines */
-            --secondary-color: #8cffb3; /* A complementary green for emphasis */
+            --primary-color: #00e6e6; /* A vibrant cyan for headlines */
+            --secondary-color: #e6e600; /* A complementary yellow for emphasis */
             --text-color: #e0e0e0; /* Light gray for body text */
-            --background-color: #1a1a33; /* Dark background fallback */
-            --container-bg: rgba(255, 255, 255, 0.08); /* Frosted glass effect */
-            --container-border: rgba(255, 255, 255, 0.18);
-            --shadow-color: rgba(31, 38, 135, 0.37);
+            --background-color: #121212; /* A deeper, darker background */
+            --container-bg: rgba(255, 255, 255, 0.05); /* Lighter frosted glass effect */
+            --container-border: rgba(255, 255, 255, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --qr-border-color: rgba(0, 230, 230, 0.8);
+            --contact-bg: rgba(0, 230, 230, 0.05); /* A subtle cyan background for the contact box */
         }
 
         /* --- Base Styles (Mobile-First) --- */
@@ -41,12 +43,12 @@
         .container {
             background-color: var(--container-bg);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 16px;
             box-shadow: 0 8px 32px 0 var(--shadow-color);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
             border: 1px solid var(--container-border);
             max-width: 90%;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s ease-in-out;
         }
 
         h1 {
@@ -55,6 +57,7 @@
             color: var(--primary-color);
             text-align: center;
             margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 230, 230, 0.8);
         }
 
         p {
@@ -70,17 +73,20 @@
         /* The link wrapper for the QR code */
         .qr-code a {
             display: inline-block;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
         }
+
         .qr-code a:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
+            box-shadow: 0 0 20px 5px var(--qr-border-color);
         }
 
         .qr-code img {
             max-width: 180px;
             height: auto;
-            border: 5px solid var(--primary-color);
-            border-radius: 10px;
+            border: 5px solid var(--qr-border-color);
+            border-radius: 12px;
+            transition: border-color 0.4s ease-in-out;
         }
 
         .qr-code p {
@@ -90,18 +96,26 @@
             margin-top: 15px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
+            text-shadow: 0 0 5px rgba(230, 230, 0, 0.6);
         }
 
         .contact-info {
             text-align: center;
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            background-color: var(--contact-bg);
+            border-radius: 10px;
+            border: 1px solid var(--primary-color); /* A more visible border */
+            box-shadow: 0 0 10px rgba(0, 230, 230, 0.5); /* A subtle glow effect */
         }
 
         .contact-info p {
-            font-size: 0.9rem;
-            color: #b0b0b0;
+            font-size: 1rem; /* Bolder font size */
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0; /* Remove default margin */
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(0, 230, 230, 0.5);
         }
 
         /* --- Desktop and Tablet Styles --- */
@@ -135,17 +149,13 @@
         <h1>Hello Students!</h1>
 
         <p>
-            Get ready to build, innovate, and create! As we gear up for upcoming projects and hackathons, I'm assembling teams for exciting initiatives.
+            Get ready to build, innovate, and create! As we gear up for upcoming projects and hackathons, I'm assembling teams for exciting initiatives. Please scan the QR code below or tap on it to fill out a short Google Form.
         </p>
 
         <p>
-            To ensure the best fit for everyone, please scan the QR code below or tap on it to fill out a short Google Form. Your input will help me understand your skills, interests, and previous projects, enabling me to create well-rounded teams that can tackle challenges effectively.
+            Your input will help me understand your skills, interests, and previous projects, enabling me to create well-rounded teams that can tackle challenges effectively.
         </p>
         
-        <p>
-            To ensure the best fit for everyone, please scan the QR code below to fill out a short Google Form. Your input will help me understand your skills, interests, and previous projects, enabling me to create well-rounded teams that can tackle challenges effectively.
-        </p>
-
         <div class="qr-code">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScdWLd0gHp_Wq2kYLjRKVakDEUbvf6duy2kpCXBg4jigOoazg/viewform?usp=sharing&ouid=111391046633524568800" target="_blank">
                 <img src="google_form_qr.png" alt="QR Code to Google Form">
